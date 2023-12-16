@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geometric Area Calculator</title>
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css"
       rel="stylesheet"
@@ -51,11 +52,13 @@
               <p>Area (A) = 0.5 X b X h</p>
               <div>
                 <input
+                  id="triangle-base"
                   class="w-14 bg-gray-200 px-2"
                   type="number"
                   placeholder="b"
                 /><span class="ml-1">cm</span>
                 <input
+                  id="triangle-height"
                   class="w-14 bg-gray-200 px-2"
                   type="number"
                   placeholder="h"
@@ -63,10 +66,14 @@
               </div>
               <div class="card-actions justify-end">
                 <button
+                  id="btn-triangle-area"
                   class="btn btn-primary w-full mt-6 rounded-lg bg-sky-500 hover:bg-sky-700 text-white"
                 >
                   Calculate
                 </button>
+                <div class="font-semibold mx-auto">
+                  Area: <span id="area-triangle">0</span>cm<sup>2</sup>
+                </div>
               </div>
             </div>
           </div>
@@ -80,11 +87,13 @@
               <p class="">Area (A) = w X l</p>
               <div>
                 <input
+                  id="rectangle-width"
                   class="w-14 bg-gray-200 px-2"
                   type="number"
                   placeholder="w"
                 /><span class="ml-1">cm</span>
                 <input
+                  id="rectangle-length"
                   class="w-14 bg-gray-200 px-2"
                   type="number"
                   placeholder="l"
@@ -92,10 +101,14 @@
               </div>
               <div class="card-actions justify-end">
                 <button
+                  id="btn-rectangle-area"
                   class="btn btn-primary w-full mt-6 rounded-lg bg-sky-500 hover:bg-sky-700 text-white"
                 >
                   Calculate
                 </button>
+                <div class="font-semibold mx-auto">
+                  Area: <span id="area-rectangle">0</span>cm<sup>2</sup>
+                </div>
               </div>
             </div>
           </div>
@@ -109,22 +122,28 @@
               <p>Area (A) = b X h</p>
               <div>
                 <input
+                  id="parallelogram-width"
                   class="w-14 bg-gray-200 px-2"
                   type="number"
-                  placeholder="b"
+                  placeholder="w"
                 /><span class="ml-1">cm</span>
                 <input
+                  id="parallelogram-length"
                   class="w-14 bg-gray-200 px-2"
                   type="number"
-                  placeholder="h"
+                  placeholder="l"
                 /><span class="ml-1">cm</span>
               </div>
               <div class="card-actions justify-end">
                 <button
+                  id="btn-parallelogram-area"
                   class="btn btn-primary w-full mt-6 rounded-lg bg-sky-500 hover:bg-sky-700 text-white"
                 >
                   Calculate
                 </button>
+                <div class="font-semibold mx-auto">
+                  Area: <span id="area-parallelogram">0</span>cm<sup>2</sup>
+                </div>
               </div>
             </div>
           </div>
@@ -135,25 +154,31 @@
             </figure>
             <div class="card-body">
               <h3 class="text-2xl font-bold">Rhombus</h3>
-              <p>Area (A) = 0.5 X d1 X d2</p>
+              <p>Area (A) = 0.5 X D X d</p>
               <div>
                 <input
+                  id="rhombus-diagonal-1"
                   class="w-14 bg-gray-200 px-2"
                   type="number"
-                  placeholder="d1"
+                  placeholder="D"
                 /><span class="ml-1">cm</span>
                 <input
+                  id="rhombus-diagonal-2"
                   class="w-14 bg-gray-200 px-2"
                   type="number"
-                  placeholder="d2"
+                  placeholder="d"
                 /><span class="ml-1">cm</span>
               </div>
               <div class="card-actions justify-end">
                 <button
+                  id="btn-rhombus-area"
                   class="btn btn-primary w-full mt-6 rounded-lg bg-sky-500 hover:bg-sky-700 text-white"
                 >
                   Calculate
                 </button>
+                <div class="font-semibold mx-auto">
+                  Area: <span id="area-rhombus">0</span>cm<sup>2</sup>
+                </div>
               </div>
             </div>
           </div>
@@ -167,11 +192,13 @@
               <p>Area (A) = 0.5 X p X b</p>
               <div>
                 <input
+                  id="perimeter"
                   class="w-14 bg-gray-200 px-2"
                   type="number"
                   placeholder="p"
                 /><span class="ml-1">cm</span>
                 <input
+                  id="apothem"
                   class="w-14 bg-gray-200 px-2"
                   type="number"
                   placeholder="b"
@@ -179,10 +206,14 @@
               </div>
               <div class="card-actions justify-end">
                 <button
+                  id="btn-pentagon-area"
                   class="btn btn-primary w-full mt-6 rounded-lg bg-sky-500 hover:bg-sky-700 text-white"
                 >
                   Calculate
                 </button>
+                <div class="font-semibold mx-auto">
+                  Area: <span id="area-pentagon">0</span>cm<sup>2</sup>
+                </div>
               </div>
             </div>
           </div>
@@ -196,11 +227,13 @@
               <p>Area (A) = PI X a X b</p>
               <div>
                 <input
+                  id="ellipse-a"
                   class="w-14 bg-gray-200 px-2"
                   type="number"
                   placeholder="a"
                 /><span class="ml-1">cm</span>
                 <input
+                  id="ellipse-b"
                   class="w-14 bg-gray-200 px-2"
                   type="number"
                   placeholder="b"
@@ -208,10 +241,14 @@
               </div>
               <div class="card-actions justify-end">
                 <button
+                  id="btn-ellipse-area"
                   class="btn btn-primary w-full mt-6 rounded-lg bg-sky-500 hover:bg-sky-700 text-white"
                 >
                   Calculate
                 </button>
+                <div class="font-semibold mx-auto">
+                  Area: <span id="area-ellipse">0</span>cm<sup>2</sup>
+                </div>
               </div>
             </div>
           </div>
@@ -224,5 +261,7 @@
         </div>
       </div>
     </main>
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/app.js"></script>
   </body>
 </html>
