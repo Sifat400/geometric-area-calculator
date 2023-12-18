@@ -12,6 +12,7 @@ document
     const area = 0.5 * base * height;
 
     setElementInnerText("area-triangle", area);
+    addCalculatorEntry("Triangle", area);
   });
 
 // // Rectangle  Calculation
@@ -27,9 +28,10 @@ document
     }
     const area = width * length;
     setElementInnerText("area-rectangle", area);
+    addCalculatorEntry("Rectangle", area);
   });
 
-// // parallelogram Calculation
+// // Parallelogram Calculation
 document
   .getElementById("btn-parallelogram-area")
   .addEventListener("click", function () {
@@ -42,9 +44,10 @@ document
     }
     const area = width * length;
     setElementInnerText("area-parallelogram", area);
+    addCalculatorEntry("Parallelogram", area);
   });
 
-// // rombush Calculation
+// // Rhombus Calculation
 document
   .getElementById("btn-rhombus-area")
   .addEventListener("click", function () {
@@ -57,6 +60,7 @@ document
     }
     const area = 0.5 * diagonal1 * diagonal2;
     setElementInnerText("area-rhombus", area);
+    addCalculatorEntry("Rhombus", area);
   });
 
 // // Pentagon Calculation
@@ -72,6 +76,7 @@ document
     }
     const area = 0.5 * perimeter * apothem;
     setElementInnerText("area-pentagon", area);
+    addCalculatorEntry("Pentagon", area);
   });
 
 // // Ellipse Calculation
@@ -90,4 +95,6 @@ document
     const area = pi * a * b;
     const areaTwoDecimal = area.toFixed(2);
     setElementInnerText("area-ellipse", areaTwoDecimal);
+
+    addCalculatorEntry("Eliipse", areaTwoDecimal);
   });
